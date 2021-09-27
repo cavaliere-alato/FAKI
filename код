@@ -1,0 +1,45 @@
+#include <iostream>
+int main()
+{
+    int a[1000], n, k=0, l;
+    std::cin >> n;
+    if (n != 1)
+    {
+        for (int i = 0; i < n; ++i)
+        {
+            std::cin >> a[i];
+            k += a[i];
+        }
+        l = k / n;
+        for (int i = 0; i < n; ++i)
+        {
+            if (a[0] > 0)
+            {
+                if (a[i] > l)
+                {
+                    std::cout << a[i] << ' ';
+                }
+                else
+                {
+                }
+            }
+            else
+            {
+                if (a[i] > l - 1)
+                {
+                    std::cout << a[i] << ' ';
+                }
+                else
+                {
+                }
+            }
+        }
+    }
+    else
+    {
+        std::cin >> a[0];
+        std::cout << a[0];
+
+    }
+    return 0;
+}
