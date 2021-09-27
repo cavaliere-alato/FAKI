@@ -1,0 +1,73 @@
+#include <iostream>
+int main()
+{
+    int a[10][10], n, m;
+    std::cin >> n >> m;
+
+
+    for (int k = 0; k < m; ++k)
+    {
+        for (int i = 0; i < n; ++i)
+        {
+            std::cin >> a[i][k];
+        }
+    }
+
+
+    if (n == m)
+    {
+        for (int k = 0; k < m; ++k)
+        {
+            for (int i = 0; i < n; ++i)
+            {
+                std::cout << a[k][i] << ' ';
+            }
+            std::cout << '\n';
+        }
+    }
+
+
+    if (n > m)
+    {
+        for (int k = m; k < n; ++k)
+        {
+            for (int i = 0; i < n; ++i)
+            {
+                a[i][k] = 0;
+            }
+        }
+
+        for (int k = 0; k < n; ++k)
+        {
+            for (int i = 0; i < m; ++i)
+            {
+                std::cout << a[k][i] << ' ';
+            }
+            std::cout << '\n';
+        }
+    }
+
+
+    if (n < m)
+    {
+        for (int k = 0; k < m; ++k)
+        {
+            for (int i = n; i < m; ++i)
+            {
+                a[i][k] = 0;
+            }
+        }
+
+        for (int k = 0; k < n; ++k)
+        {
+            for (int i = 0; i < m; ++i)
+            {
+                std::cout << a[k][i] << ' ';
+            }
+            std::cout << '\n';
+        }
+    }
+
+
+    return 0;
+}
